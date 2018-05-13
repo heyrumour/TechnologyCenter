@@ -1,0 +1,239 @@
+/* 首页 */
+.index-bg {
+  margin-top: -160px;
+  width: 100%;
+  height: 873px;
+  background-size: 100% auto;
+}
+.index-wrapper{
+  margin-top: 54px;
+}
+.index-box {
+  margin-bottom: 54px !important;
+}
+.birthday_li {
+	display: inline-block;
+	width: 270px;
+	height: 392px;
+	background: #ffffff;
+	font-size: 16px;
+	overflow: hidden;
+  cursor: pointer;
+  margin-right: 27px;
+  margin-bottom: 46px;
+  padding: 44px 36px 0;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+}
+.birthday_li .hr {
+  width: 130px;
+  background: #eee; 
+  height: 1px;
+  margin: 0 auto;
+}
+.birthday_li:nth-child(4n+4) {
+  margin-right: 0px;
+}
+.birthday-bg {
+  width: 198px;
+  height: 198px;
+  background-size: 100% 100%;
+  border-radius: 50%;
+}
+.birthday_message {
+  position: relative;
+}
+.birthday_name {
+  margin-top: 13px;
+  font-size: 16px;
+  height: 56px;
+  line-height: 56px;
+  color: #333;
+}
+.birthday_date {
+  height: 32px;
+  line-height: 32px;
+  color: #bbb;
+  font-size: 12px;
+}
+.birthday_day {
+  font-size: 12px;
+  color: #666;
+  margin-top: 7px;
+}
+.birthday_day span {
+  color: #d1ae91;
+  font-size: 16px;
+}
+/* 首页结束 */
+
+/* 博客相关，技术分享，开源项目，技术之星，团队风采，生日会 */
+.list-box {
+  width: 1174px;
+}
+.list-box .blog-department {
+  margin-top: 25px;
+  height: 74px;
+  line-height: 74px;
+}
+.blog-department .blog-list li {
+  float: left;
+  color: #666;
+  font-size: 18px;
+  margin-right: 23px;
+  cursor: pointer;
+}
+.blog-department .blog-list li.active {
+  color: #e49d53;
+}
+.blog_ul, .git_ul, .share_ul, .start_ul, .birthday_ul, .team_ul, .recommend_ul {
+	position: relative;
+	width: 1174px;
+	margin: 0px auto;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.git_ul, .share_ul, .start_ul, .birthday_ul, .team_ul, .recommend_ul {
+  margin-top: 46px !important;
+}
+.common_li {
+	display: inline-block;
+  width: 370px;
+  height: 296px;
+	background: #ffffff;
+	font-size: 14px;
+	overflow: hidden;
+  cursor: pointer;
+  margin-right: 32px;
+  margin-bottom: 46px;
+}
+.team_li {
+  height: 250px;
+  width: 367px;
+}
+.index_li {
+  width: 367px;
+}
+.common_li:nth-child(3n+3) {
+  margin-right: 0px;
+}
+.common_img {
+	width: 100%;
+	height: 227px;
+	object-fit: cover;
+}
+.common_message {
+  position: relative;
+}
+.common_title {
+  padding-left: 14px;
+  font-size: 14px;
+  line-height: 38px;
+  color: #333;
+  height: 38px;
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.team-title {
+  max-width: 100%;
+  padding: 0 14px;
+}
+.common_write {
+  padding-left: 14px;
+  color: #bbb;
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+}
+.common_type {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 12px;
+  color: #ccc;
+  padding: 2px 8px;
+  border: 1px solid #ccc;
+}
+.team_type {
+  top: 5px;
+}
+/* 博客相关，技术分享，开源项目，技术之星，团队风采，生日会 结束 */
+
+/* 留言墙 */
+.message-bg {
+  margin-top: -160px;
+  width: 100%;
+  height: 634px;
+  background-size: 100% auto;
+}
+.title-box {
+  width: 1170px;
+  margin-top: 32px;
+  margin-bottom: 309px;
+}
+.title-box .heading {
+  width: 1170px;
+  text-align: center;
+}
+.title-box .heading h3 {
+  height: 91px;
+  line-height: 91px;
+  display: inline-block;
+  color: #333;
+  font-size: 36px;
+  font-weight: normal;
+  border-bottom: 2px solid #e49d53;
+}
+.message-form {
+  margin-top: 50px;
+  background: #fff;
+  padding: 47px 55px 51px;
+  border-radius: 10px;
+}
+.message-form .message-name {
+  padding-left: 39px;
+  padding-right: 39px;
+  display: block;
+  width: 368px;
+  height: 46px;
+  line-height: 46px;
+  background-color: #ffffff;
+  border: solid 1px #e1e1e1;
+  background: url("/static/asset/image/name.png") no-repeat 13px center;
+  background-size: 14px 14px;
+}
+.message-form input::-webkit-input-placeholder, message-form input:-moz-placeholder, message-form input::-moz-placeholder, message-form input:-ms-input-placeholder {
+  color:#333;
+  font-size: 12px;
+}
+.message-form textarea::-webkit-input-placeholder, message-form textarea:-moz-placeholder, message-form textarea::-moz-placeholder, message-form textarea:-ms-input-placeholder {
+  color:#333;
+  font-size: 12px;
+}
+.message-form .message-content {
+  background: url("/static/asset/image/message.png") no-repeat 13px 20px;
+  box-sizing: border-box;
+  padding: 18px 40px;
+  margin-top: 22px;
+  display: block;
+  width: 100%;
+	height: 286px;
+	background-color: #ffffff;
+	border: solid 1px #e1e1e1;
+}
+.message-form .send {
+  margin-top: 22px;
+  width: 120px;
+	height: 36px;
+	background-color: #e49d53;
+  border-radius: 4px;
+  line-height: 36px;
+  border: none;
+  color: #fff;
+}
+/* 留言墙结束 */

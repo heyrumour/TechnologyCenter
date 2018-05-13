@@ -1,0 +1,25 @@
+<link rel="import" href="./common/nav.html?__inline">
+<!-- 技术之星 -->
+<div class="list-box container">
+    <div class="start">
+        <ul class="start_ul"></ul>
+    </div>
+</div>
+<div class="popup">
+    <img src="http://bmob-cdn-15734.b0.upaiyun.com/2018/05/03/7192d8dc40200370808f1e53917be634.jpg" alt="">
+</div>
+<link rel="import" href="./common/footer.html?__inline">
+<script type="text/javascript">
+    // 点击看大图
+    $(".start_ul").delegate('.common_li', 'click', function(e){  //动态绑定事件
+        var img_url = $(this).find("img")[0].src;
+        if (img_url) {
+            $(".popup").children("img").attr("src", img_url);
+            $(".popup").show();
+        }
+    });
+    // 点击大图关闭
+    $(".popup").click(function(){
+        $(this).hide();
+    });
+</script>

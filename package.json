@@ -1,0 +1,17 @@
+{
+  "name": "TechnologyCenter",
+  "version": "1.0.0",
+  "description": "技术中心",
+  "main": "fis-conf.js",
+  "scripts": {
+    "server": "anywhere",
+    "dev": "fis3 release develop -d ./ -w",
+    "prod": "fis3 release prod -d ./"
+  },
+  "author": {
+    "name": "heyang",
+    "email": "heyang@linghit.com"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

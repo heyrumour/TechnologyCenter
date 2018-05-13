@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>灵机文化</title>
+    <link rel="stylesheet" type="text/css" href="/devPub/asset/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/devPub/asset/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/devPub/asset/css/home.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container clearFloat">
+            <a href="index.html" class="logo">
+                <span class="logo-name">技术中心</span>
+            </a>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="share.html">技术分享</a></li>
+                <li><a href="source.html">开源项目</a></li>
+                <li><a href="star.html">技术之星</a></li>
+                <li><a href="team.html">团队风采</a></li>
+                <li><a href="birthday.html">生日会</a></li>
+                <li><a href="message.html">留言墙</a></li>
+            </ul>
+        </div>
+    </header>
+
+<!-- 生日会 -->
+<div class="list-box container">
+    <div class="birthday">
+        <ul class="birthday_ul"></ul>
+    </div>   
+</div>
+<div class="popup">
+    <img src="http://bmob-cdn-15734.b0.upaiyun.com/2018/05/03/7192d8dc40200370808f1e53917be634.jpg" alt="">
+</div>
+<footer id="footer">
+    <div class="footer-nav clearFloat">
+        <ul>
+            <li>
+                <a href="#">公司概况</a>
+            </li>
+            <li>
+                <a href="#">公司动态</a>
+            </li>
+            <li>
+                <a href="#">灵机科技</a>
+            </li>
+            <li>
+                <a href="#">灵机教育</a>
+            </li>
+            <li>
+                <a href="#">灵机生活</a>
+            </li>
+            <li>
+                <a href="#">加入我们</a>
+            </li>
+            <li>
+                <a href="#">开放合作</a>
+            </li>
+        </ul>
+    </div>
+    <p class="copyright">广东灵机文化传播有限公司版权所有&nbsp;@2006- 2018&nbsp;粤ICP备12023257号-2</p>
+</footer>
+<script type="text/javascript" src="/devPub/asset/js/jquery.js"></script>
+<script type="text/javascript" src="/devPub/asset/js/nav.js"></script>
+<script type="text/javascript" src="/devPub/asset/js/bmob-min.js"></script>
+<script type="text/javascript" src="/devPub/asset/js/home.js"></script>
+</body>
+
+</html>
+<script type="text/javascript" src="/devPub/asset/js/lunar.js"></script>
+<script type="text/javascript">
+    // 点击看大图
+    $(".birthday_ul").delegate(".birthday-bg", "click", function(e){
+        var img_url = $(this).css("backgroundImage").replace('url(\"','').replace('\")','');
+        if (img_url) {
+            $(".popup").children("img").attr("src", img_url);
+            $(".popup").show();
+        }
+    });
+    // 点击大图关闭
+    $(".popup").click(function(){
+        $(this).hide();
+    });
+</script>

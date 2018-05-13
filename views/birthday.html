@@ -1,0 +1,26 @@
+<link rel="import" href="./common/nav.html?__inline">
+<!-- 生日会 -->
+<div class="list-box container">
+    <div class="birthday">
+        <ul class="birthday_ul"></ul>
+    </div>   
+</div>
+<div class="popup">
+    <img src="http://bmob-cdn-15734.b0.upaiyun.com/2018/05/03/7192d8dc40200370808f1e53917be634.jpg" alt="">
+</div>
+<link rel="import" href="./common/footer.html?__inline">
+<script type="text/javascript" src="/static/asset/js/lunar.js"></script>
+<script type="text/javascript">
+    // 点击看大图
+    $(".birthday_ul").delegate(".birthday-bg", "click", function(e){
+        var img_url = $(this).css("backgroundImage").replace('url(\"','').replace('\")','');
+        if (img_url) {
+            $(".popup").children("img").attr("src", img_url);
+            $(".popup").show();
+        }
+    });
+    // 点击大图关闭
+    $(".popup").click(function(){
+        $(this).hide();
+    });
+</script>
