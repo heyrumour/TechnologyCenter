@@ -27,8 +27,8 @@ fis.media('prod').match('*.{css,js,es6,jpg,png,jpeg,gif,swf}', {
     useHash: true
 })
 .match(/^\/views\/(.*)/i, {
-    release: '/staticPub/views/$1',
-    url: '/staticPub/views/$1'
+    release: '/staticPub/$1',
+    url: '/staticPub/$1'
 })
 .match(/^\/static\/(.*)/i, {
     release: '/staticPub/$1',
