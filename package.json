@@ -12,6 +12,13 @@
     "name": "heyang",
     "email": "heyang@linghit.com"
   },
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
