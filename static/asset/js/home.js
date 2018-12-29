@@ -72,7 +72,7 @@ function birthday() {
 			}
 			var htmlText = '';
 			for(var i = 0; i < list.length; i++) {
-				htmlText += '<li class="birthday_li"><div><div class="birthday-bg" style="background: url(\'' +
+				htmlText += '<li class="birthday_li"><div><div class="birthday-bg lazy" style="background: url(\'' +
 					list[i].mUrl + '\') no-repeat center center;background-size:100% 100%;"></div><div class="birthday_message"><div class="birthday_name">' +
 					list[i].mName + '</div><div class="hr"></div><div class="birthday_date">' +
 					list[i].mDate + '</div><div class="birthday_day">距离生日还有<span>' + 
@@ -99,12 +99,17 @@ function share() {
 				if(object.get("photo") != undefined) {
 					img = object.get("photo")._url;
 				}
-				htmlText += '<li class="common_li"><div><img class="common_img" src="' +
+				htmlText += '<li class="common_li"><div><img class="common_img lazy" width="370" heigh="227" data-original="' + 
 					img + '"/><div class="common_message">' + '<div class="common_title">' +
 					object.get("title") + '</div><div class="common_write">' +
 					object.get("name") + '</div><div class="common_type">技术分享</div></div></li>';
 			}
+			$(".spinner-wrapper").hide();
 			$(".share_ul").append(htmlText);
+			$("img.lazy").lazyload({
+				effect: "fadeIn",
+			});
+			
 		},
 		error: function(error) {
 			alert("查询失败: " + error.code + " " + error.message);
@@ -126,12 +131,16 @@ function git() {
 					img = object.get("photo")._url;
 				}
 				var link = 'onclick=\'window.open("' + object.get("url") + '")\'';
-				htmlText += '<li class="common_li"' + link + '><div><img class="common_img" src="' +
+				htmlText += '<li class="common_li"' + link + '><div><img class="common_img lazy" data-original="' +
 					img + '"/><div class="common_message">' + '<div class="common_title">' +
 					object.get("title") + '</div><div class="common_write">' +
 					object.get("name") + '</div><div class="common_type">开源项目</div></div></li>';
 			}
+			$(".spinner-wrapper").hide();
 			$(".git_ul").append(htmlText);
+			$("img.lazy").lazyload({
+				effect: "fadeIn",
+			});
 		},
 		error: function(error) {
 			alert("查询失败: " + error.code + " " + error.message);
@@ -152,12 +161,16 @@ function start() {
 				if(object.get("photo") != undefined) {
 					img = object.get("photo")._url;
 				}
-				htmlText += '<li class="common_li"><div><img class="common_img" src="' +
+				htmlText += '<li class="common_li"><div><img class="common_img lazy" data-original="' +
 				img + '"/><div class="common_message">' + '<div class="common_title">' +
 				object.get("title") + '</div><div class="common_write">' +
 				object.get("name") + '</div><div class="common_type">技术之星</div></div></li>';
 			}
+			$(".spinner-wrapper").hide();
 			$(".start_ul").append(htmlText);
+			$("img.lazy").lazyload({
+				effect: "fadeIn",
+			});
 		},
 		error: function(error) {
 			alert("查询失败: " + error.code + " " + error.message);
@@ -176,12 +189,16 @@ function blog(type) {
 			for(var i = 0; i < results.length; i++) {
 				var object = results[i];
 				var link = 'onclick=\'window.open("' + object.get("url") + '")\'';
-				htmlText += '<li class="common_li"' + link + '><div><img class="common_img" src="' +
+				htmlText += '<li class="common_li"' + link + '><div><img class="common_img lazy" data-original="' +
 					object.get("img") + '"/><div class="common_message">' + '<div class="common_title">' +
 					object.get("title") + '</div><div class="common_write">' +
 					object.get("name") + '</div><div class="common_type">博客</div></div></li>';
 			}
+			$('.spinner-wrapper').hide();
 			$(".blog_ul").append(htmlText);
+			$("img.lazy").lazyload({
+				effect: "fadeIn",
+			});
 		},
 		error: function(error) {
 			alert("查询失败: " + error.code + " " + error.message);
@@ -202,7 +219,8 @@ function blog(type) {
 $(".blog-list li").click(function(e) {
 	$(this).siblings('li').removeClass('active');
 	$(this).addClass('active');
-    $('.blog_ul').html("");
+	$('.blog_ul').html("");
+	$('.spinner-wrapper').show();
     blog($(this).attr("data"));
 });
 
